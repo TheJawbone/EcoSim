@@ -29,21 +29,12 @@ public class Driver {
         }
         TemperatureData data = generator.generateAnnualData(2.5);
 
-        // SYMULACJA
-        Tank tank = new Tank();
+        FuelStation fuelStation = new FuelStation(new Tank(3, 10, 0.02, 0.8, 15));
         for(double ambientTemperature : data.getAvgDailyUndergroundTemperatures()) {
-            tank.calculateFuelTemperature(ambientTemperature);
-            System.out.println(round(tank.getFuelTemperature(), 4) + "\t" + round(ambientTemperature, 4));
+            fuelStation.update(ambientTemperature);
+            System.out.println(Util.round(fuelStation.getTank().getFuelTemperature(), 4) + "\t"
+                    + Util.round(ambientTemperature, 4) + "\t" + fuelStation.getTank().getFillFactor() * 100 + "%");
         }
 
     }
-
-    public static double round(double value, int places) {
-        if (places < 0) throw new IllegalArgumentException();
-
-        BigDecimal bd = new BigDecimal(value);
-        bd = bd.setScale(places, RoundingMode.HALF_UP);
-        return bd.doubleValue();
-    }
-
 }
