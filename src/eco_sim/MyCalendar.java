@@ -12,22 +12,19 @@ public class MyCalendar {
     }
 
     public void set(int year, int month, int day, int hour, int minute) {
-        calendar.set(year, month + 1, day, hour, minute);
+        calendar.set(year, month - 1, day, hour, minute);
     }
 
     public int get(int choice) {
-        switch(choice) {
-            case Calendar.YEAR:
-                return calendar.get(Calendar.YEAR);
-            case Calendar.MONTH:
-                return calendar.get(Calendar.MONTH) + 1;
-            case Calendar.DAY_OF_MONTH:
-                return calendar.get(Calendar.DAY_OF_MONTH);
-            case Calendar.HOUR_OF_DAY:
-                return calendar.get(Calendar.HOUR_OF_DAY);
-            default:
-                return -1;
+        if(choice == Calendar.MONTH) {
+            return calendar.get(choice) + 1;
+        } else {
+            return calendar.get(choice);
         }
+    }
+
+    public int getActualMaximum(int choice) {
+        return calendar.getActualMaximum(choice);
     }
 
     public void nextHour() {
