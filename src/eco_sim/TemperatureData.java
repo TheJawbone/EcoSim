@@ -1,5 +1,8 @@
 package eco_sim;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TemperatureData {
 
     int coldestDayNumber;
@@ -9,12 +12,14 @@ public class TemperatureData {
     double avgTemperature;
     double[] avgDailyAirTemperatures;
     double[] avgDailyUndergroundTemperatures;
+    List<Double> avgDailyFuelTemperatures;
 
     public TemperatureData() {
         maxTemperature = Double.MIN_VALUE;
         minTemperature = Double.MAX_VALUE;
         avgDailyAirTemperatures = new double[365];
         avgDailyUndergroundTemperatures = new double[365];
+        avgDailyFuelTemperatures = new ArrayList<>();
     }
 
     public double getMaxTemperature() {
@@ -71,5 +76,13 @@ public class TemperatureData {
 
     public void setColdestDayNumber(int coldestDayNumber) {
         this.coldestDayNumber = coldestDayNumber;
+    }
+
+    public List<Double> getAvgDailyFuelTemperatures() {
+        return avgDailyFuelTemperatures;
+    }
+
+    public void addAvgDailyFuelTemperature(double fuelTemperature) {
+        avgDailyFuelTemperatures.add(fuelTemperature);
     }
 }

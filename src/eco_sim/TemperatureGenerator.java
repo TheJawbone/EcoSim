@@ -32,15 +32,15 @@ public class TemperatureGenerator {
         temperatureData = new TemperatureData();
     }
 
-    public TemperatureData generateAnnualData(double depth) {
+    public TemperatureData generateAnnualData(double depth, double displacement) {
         MyCalendar calendar = new MyCalendar();
         calendar.set(2001, 1, 1, 0, 0);
-        calculateMeanDailyTemperatures();
+        calculateMeanDailyTemperatures(displacement);
         calculateUndergroundTemperatures(depth);
         return temperatureData;
     }
 
-    public double calculateAirTemperature(MyCalendar date) {
+    public double calculateAirTemperature(MyCalendar date, double displacement) {
 
         // Initialize prevDate if not initialized (during first call of the method)
         if(prevDate == null) {
@@ -75,12 +75,12 @@ public class TemperatureGenerator {
         double temperatureFluctuationFactor = (temperatureFluctuationFactorDaily + temperatureFluctuationFactorMonthly
                 + temperatureFluctuationFactorGlobal) / 6 + 1;
         double temperature = (temperatureSpread / 2) * temperatureFluctuationFactor * Math.sin(sinArg) + peakBottomAvg
-                + temperatureOffset;
+                + temperatureOffset + displacement;
 
         return temperature;
     }
 
-    public double[] calculateMeanDailyTemperatures() {
+    public double[] calculateMeanDailyTemperatures(double displacement) {
 
         MyCalendar calendar = new MyCalendar();
         int year = 2001;
@@ -90,7 +90,7 @@ public class TemperatureGenerator {
         double[] avgTemperatures = new double[calendar.getActualMaximum(Calendar.DAY_OF_YEAR)];
         int currentDay = calendar.get(Calendar.DAY_OF_YEAR);
         while(calendar.get(Calendar.YEAR) == year) {
-            double temperature = calculateAirTemperature(calendar);
+            double temperature = calculateAirTemperature(calendar, displacement);
             temperatureSums[calendar.get(Calendar.DAY_OF_YEAR) - 1] += temperature;
             if(temperature > temperatureData.getMaxTemperature()) {
                 temperatureData.setMaxTemperature(temperature);

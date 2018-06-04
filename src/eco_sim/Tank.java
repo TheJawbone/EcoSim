@@ -9,7 +9,6 @@ public class Tank {
     private double fuelTemperature;
     private double fuelVolume;
     private double fuelMass;
-    private double fuelAmount;
     private double fillFactor;
     private final double steelThermalConductivity = 58;
     private final double fuelSpecificHeat = 2100;
@@ -25,7 +24,6 @@ public class Tank {
         tankVolume = Math.PI * Math.pow(tankRadius, 2) * tankHeight;
         tankSurfaceArea = 2 * Math.PI * tankRadius * (tankRadius + tankHeight);
         fuelVolume = tankVolume * initialFillFactor;
-        fuelAmount = fuelVolume * 1000;
         fuelMass = Fuel.calculateMass(fuelVolume, fuelTemperature);
     }
 
@@ -42,12 +40,12 @@ public class Tank {
         fuelTemperature = Fuel.calculateMixedTemperature(temperature, volume, fuelTemperature, fuelVolume);
         fuelMass += refillMass;
         fuelVolume = Fuel.calculateVolume(fuelMass, fuelTemperature);
-        fuelAmount = fuelVolume * 1000;
+        fillFactor = fuelVolume / tankVolume;
     }
 
     public void subtractFuel(double amount) {
-        fuelAmount -= amount;
-        fuelVolume = fuelAmount / 1000;
+        fuelVolume -= amount;
+        fuelMass = Fuel.calculateMass(fuelVolume, fuelTemperature);
         fillFactor = fuelVolume / tankVolume;
     }
 

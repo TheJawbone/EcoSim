@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ada64568-509b-4d60-b8d0-349633d7c781" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/eco_sim/Fuel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eco_sim/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air_temp_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/air_temp_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Fuel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Fuel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/FuelStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/FuelStation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Tank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/TemperatureGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/TemperatureGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EcoSim/eco_sim/Util.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eco_sim/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eco_sim/Fuel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/Fuel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eco_sim/FuelStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/FuelStation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eco_sim/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eco_sim/TemperatureData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/TemperatureData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eco_sim/Util.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Driver.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Driver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="114" selection-start-line="35" selection-start-column="114" selection-end-line="35" selection-end-column="114" />
+            <state relative-caret-position="221">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,11 +43,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FuelStation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FuelStation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/FuelStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="221">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding>
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,8 +61,8 @@
       <file leaf-file-name="Tank.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/Tank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding>
                 <element signature="e#1274#1275#0" expanded="true" />
                 <element signature="e#1312#1313#0" expanded="true" />
@@ -63,23 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/eco_sim/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Fuel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/Fuel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#279#280#0" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
@@ -100,8 +100,8 @@
       <file leaf-file-name="TemperatureGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="323">
+              <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,11 +112,16 @@
       <file leaf-file-name="TemperatureData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="289">
+              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1250#1251#0" expanded="true" />
                 <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#2166#2167#0" expanded="true" />
+                <element signature="e#2213#2214#0" expanded="true" />
+                <element signature="e#2287#2288#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,6 +151,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>2000</find>
+      <find>fuelamount</find>
+      <find>generateannualdata</find>
+      <find>calculatemean</find>
+      <find>calculateaurtemperature</find>
+      <find>airtemperat</find>
+      <find>calculatemix</find>
+      <find>generateannual</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,13 +170,13 @@
         <option value="$PROJECT_DIR$/src/eco_sim/Location.java" />
         <option value="$PROJECT_DIR$/src/eco_sim/Climate.java" />
         <option value="$PROJECT_DIR$/src/eco_sim/MyCalendar.java" />
-        <option value="$PROJECT_DIR$/src/eco_sim/TemperatureData.java" />
-        <option value="$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java" />
-        <option value="$PROJECT_DIR$/src/eco_sim/Fuel.java" />
         <option value="$PROJECT_DIR$/src/eco_sim/Util.java" />
-        <option value="$PROJECT_DIR$/src/eco_sim/Driver.java" />
+        <option value="$PROJECT_DIR$/src/eco_sim/Fuel.java" />
         <option value="$PROJECT_DIR$/src/eco_sim/Tank.java" />
+        <option value="$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java" />
+        <option value="$PROJECT_DIR$/src/eco_sim/TemperatureData.java" />
         <option value="$PROJECT_DIR$/src/eco_sim/FuelStation.java" />
+        <option value="$PROJECT_DIR$/src/eco_sim/Driver.java" />
       </list>
     </option>
   </component>
@@ -288,7 +300,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -321,17 +333,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/eco_sim/Tank.java</url>
-          <line>48</line>
+          <url>file://$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java</url>
+          <line>45</line>
           <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="28" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="fuelStation.getTank().getFuelTemperature()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>fuelStation.getTank().getFuelTemperature()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>fuelDensity</expression-string>
         <language-id>JAVA</language-id>
@@ -359,6 +381,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,8 +402,13 @@
         <state relative-caret-position="578">
           <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1250#1251#0" expanded="true" />
             <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,38 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eco_sim/Fuel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/eco_sim/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -522,20 +523,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eco_sim/Driver.java">
+    <entry file="file://$PROJECT_DIR$/src/eco_sim/Fuel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="114" selection-start-line="35" selection-start-column="114" selection-end-line="35" selection-end-column="114" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/eco_sim/Tank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding>
             <element signature="e#1274#1275#0" expanded="true" />
             <element signature="e#1312#1313#0" expanded="true" />
@@ -547,10 +549,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/eco_sim/FuelStation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="221">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eco_sim/TemperatureGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eco_sim/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
