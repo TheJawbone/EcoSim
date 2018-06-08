@@ -11,7 +11,6 @@ public class Fuel {
     }
 
     public static double calculateMixedTemperature(double t1, double vol1, double t2, double vol2) {
-        double test = (t1 * vol1 + t2 * vol2) / (vol1 + vol2);
         return (t1 * vol1 + t2 * vol2) / (vol1 + vol2);
     }
 
