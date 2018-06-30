@@ -1,0 +1,7 @@
+Pristine Petroleum
+0.1
+4
+Jeff 31 0.2
+Arnold 60 0.3
+Earl 43 0.1
+Josh 21 0.01

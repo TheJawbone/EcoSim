@@ -1,66 +1,61 @@
 package eco_sim;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.io.File;
 
+/**
+ * Driver class is the main class of the application. It acts as a container for the main method.
+ */
 public class Driver {
 
+    /**
+     * Main method of the application
+     * @param args Command line arguments, none are necessary in this application.
+     */
     public static void main(String[] args) {
 
-        // Create fuel stations and temperatures for them, store pairs of objects in a list
-        List<List<Object>> temperaturesAndFuelStations = new ArrayList<>();
-        for(int i = 0; i < 10; i++) {
-
-            // Create temperature generator, generate year of data and add it to the list
-            TemperatureGenerator generator = new TemperatureGenerator();
-            TemperatureData data = generator.generateAnnualData(2.5, i - 5);
-            List<Object> temperatureAndFuelStation = new ArrayList<>();
-            temperatureAndFuelStation.add(data);
-
-            // Create fuel station and add it to the list
-            String stationName = "Station" + (i + 1);
-            FuelStation station = new FuelStation(stationName,
-                    new Tank(stationName, 1.5, 6, 0.02, 0.8 + 0.01 * i, data.getAvgDailyUndergroundTemperatures()[0]),
-                    (i + 1) / 10.0f);
-            temperatureAndFuelStation.add(station);
-
-            // Add created pair to the list
-            temperaturesAndFuelStations.add(temperatureAndFuelStation);
+        // Create suppliers from files
+        List<Supplier> suppliers = new ArrayList<>();
+        File directory = new File(System.getProperty("user.dir") + "\\data\\suppliers");
+        File[] files = directory.listFiles();
+        for(File file : files) {
+            Supplier supplier = new Supplier(file.getAbsolutePath());
+            suppliers.add(supplier);
         }
 
-        // Iterate through each day of the year
-        for(int i = 0; i < 365; i++) {
+        // Create fuel stations from file
+        directory = new File(System.getProperty("user.dir") + "\\data\\fuel_stations");
+        files = directory.listFiles();
+        List<FuelStation> stations = new ArrayList<>();
+        for(File file : files) {
+            FuelStation station = new FuelStation(file.getAbsolutePath());
+            for(Supplier supplier : suppliers) {
+                station.getSuppliers().add(supplier);
+            }
+            stations.add(station);
+        }
+
+        // Iterate through the data
+        MyCalendar currentDate = new MyCalendar();
+        currentDate.set(2000, 1, 1);
+        for(int i = 0; i < currentDate.getActualMaximum(Calendar.DAY_OF_YEAR); i++) {
 
             // Iterate through each pair of fuel station and temperature
-            for (List<Object> temperatureAndFuelStation : temperaturesAndFuelStations) {
-
-                // Read temperature data and fuel station from the list
-                TemperatureData data = (TemperatureData)temperatureAndFuelStation.get(0);
-                FuelStation station = (FuelStation)temperatureAndFuelStation.get(1);
-
-                // Read the underground and air temperatures
-                double airTemperature = data.getAvgDailyAirTemperatures()[i];
-                double undergroundTemperature = data.getAvgDailyUndergroundTemperatures()[i];
+            for (FuelStation station : stations) {
 
                 // Update the fuel station and store current fuel data
-                station.update(undergroundTemperature, airTemperature);
-                data.addAvgDailyFuelTemperature(station.getTank().getFuelTemperature());
-
-                // Print data
-                System.out.println(station.getName() + "\t"
-                        + String.format("%.2f \t %.2f \t %.2f \t",
-                        station.getTank().getFuelTemperature(),
-                        undergroundTemperature,
-                        station.getTank().getFillFactor() * 100));
+                station.update(currentDate);
             }
-            System.out.println("\r\n");
+            currentDate.nextDay();
         }
 
         // End simulation
-        for (List<Object> temperatureAndFuelStation : temperaturesAndFuelStations) {
-            FuelStation station = (FuelStation)temperatureAndFuelStation.get(1);
-            station.getTank().endSimulation();
-            station.endSimulation();
+        for (FuelStation station : stations) {
+            for(Tank tank : station.getTanks()) {
+                tank.writeData();
+            }
         }
     }
 }
